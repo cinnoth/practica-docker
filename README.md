@@ -10,13 +10,13 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
 
 1. **Descargar la imagen de Ubuntu.** Ejecuta el siguiente comando para descargar la imagen oficial de Ubuntu:
     
-    ``
+    ```
    docker pull ubuntu
-   ``
+   ```
 
 3. **Crear y acceder al contenedor.** Ejecuta el siguiente comando para crear y entrar en un contenedor interactivo basado en Ubuntu, en este caso se expondrá el puerto 4200 para su uso posterior con Angular:
 
-    ``docker run -it -p 4200:4200 --name ubuntu-container ubuntu bash``
+    ```docker run -it -p 4200:4200 --name ubuntu-container ubuntu bash```
 
     📌 Explicación:
 
