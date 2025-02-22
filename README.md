@@ -10,9 +10,11 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
 
 1. **Descargar la imagen de Ubuntu.** Ejecuta el siguiente comando para descargar la imagen oficial de Ubuntu:
     
-    ``docker pull ubuntu``
+    ``
+   docker pull ubuntu
+   ``
 
-2. **Crear y acceder al contenedor.** Ejecuta el siguiente comando para crear y entrar en un contenedor interactivo basado en Ubuntu, en este caso se expondrá el puerto 4200 para su uso posterior con Angular:
+3. **Crear y acceder al contenedor.** Ejecuta el siguiente comando para crear y entrar en un contenedor interactivo basado en Ubuntu, en este caso se expondrá el puerto 4200 para su uso posterior con Angular:
 
     ``docker run -it -p 4200:4200 --name ubuntu-container ubuntu bash``
 
@@ -25,7 +27,7 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
     - ubuntu → Es la imagen base que se usará.
     - bash → Abre la terminal dentro del contenedor.
 
-3. **Instalar Node.js y herramientas necesarias dentro del contenedor.** Una vez dentro del contenedor, instala lo que necesitas:
+4. **Instalar Node.js y herramientas necesarias dentro del contenedor.** Una vez dentro del contenedor, instala lo que necesitas:
 
     ``apt update``
 
@@ -50,7 +52,7 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
 
     ``apt install -y nano curl wget git nodejs npm``
 
-4. **Crear un archivo index.js con "Hola Mundo".** 
+5. **Crear un archivo index.js con "Hola Mundo".** 
     1. Dentro del contenedor, usa el editor nano para crear un archivo.
 
         ``nano holamundo.js``
@@ -61,18 +63,18 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
     
     3. Guarda y cierra nano (presiona Ctrl + X, luego Y y Enter).
 
-5. **Ejecutar el código JavaScript**
+6. **Ejecutar el código JavaScript**
     1. Ejecuta el script dentro del contenedor:
 
         ``node holamundo.js``
 
         *Si todo está bien, verás el mensaje: ¡Hola, mundo desde un contenedor Ubuntu en Docker!*
 
-6. **Salir del contenedor de Ubuntu.** Para salir del contenedor de Ubuntu, ejecuta el siguiente comando:
+7. **Salir del contenedor de Ubuntu.** Para salir del contenedor de Ubuntu, ejecuta el siguiente comando:
 
     ``exit``
 
-7. **Guardar los cambios en una nueva imagen.** Una vez que hayas realizado las configuraciones necesarias, puedes guardar los cambios en una nueva imagen de Docker. Para ello, primero detén el contenedor:
+8. **Guardar los cambios en una nueva imagen.** Una vez que hayas realizado las configuraciones necesarias, puedes guardar los cambios en una nueva imagen de Docker. Para ello, primero detén el contenedor:
 
     ``docker stop ubuntu-container`
 
