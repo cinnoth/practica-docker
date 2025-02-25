@@ -14,7 +14,7 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
    docker pull ubuntu
    ```
 
-3. **Crear y acceder al contenedor.** Ejecuta el siguiente comando para crear y entrar en un contenedor interactivo basado en Ubuntu, en este caso se expondrá el puerto 4200 para su uso posterior con Angular:
+2. **Crear y acceder al contenedor.** Ejecuta el siguiente comando para crear y entrar en un contenedor interactivo basado en Ubuntu, en este caso se expondrá el puerto 4200 para su uso posterior con Angular:
 
     ```
    docker run -it -p 4200:4200 --name ubuntu-container ubuntu bash
@@ -29,7 +29,7 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
     - ubuntu → Es la imagen base que se usará.
     - bash → Abre la terminal dentro del contenedor.
 
-5. **Instalar Node.js y herramientas necesarias dentro del contenedor.** Una vez dentro del contenedor, instala lo que necesitas:
+3. **Instalar Node.js y herramientas necesarias dentro del contenedor.** Una vez dentro del contenedor, instala lo que necesitas:
 
     ```
     apt update
@@ -60,7 +60,7 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
     apt install -y nano curl wget git nodejs npm
    ```
 
-7. **Crear un archivo index.js con "Hola Mundo".** 
+4. **Crear un archivo index.js con "Hola Mundo".** 
     1. Dentro del contenedor, usa el editor nano para crear un archivo.
 
         ```
@@ -75,7 +75,7 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
     
     5. Guarda y cierra nano (presiona Ctrl + X, luego Y y Enter).
 
-8. **Ejecutar el código JavaScript**
+5. **Ejecutar el código JavaScript**
     1. Ejecuta el script dentro del contenedor:
 
         ```
@@ -84,13 +84,13 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
 
         *Si todo está bien, verás el mensaje: ¡Hola, mundo desde un contenedor Ubuntu en Docker!*
 
-9. **Salir del contenedor de Ubuntu.** Para salir del contenedor de Ubuntu, ejecuta el siguiente comando:
+6. **Salir del contenedor de Ubuntu.** Para salir del contenedor de Ubuntu, ejecuta el siguiente comando:
 
     ```
    exit
     ```
 
-11. **Guardar los cambios en una nueva imagen.** Una vez que hayas realizado las configuraciones necesarias, puedes guardar los cambios en una nueva imagen de Docker. Para ello, primero detén el contenedor:
+7. **Guardar los cambios en una nueva imagen.** Una vez que hayas realizado las configuraciones necesarias, puedes guardar los cambios en una nueva imagen de Docker. Para ello, primero detén el contenedor:
 
     ```
     docker stop ubuntu-container
@@ -133,19 +133,19 @@ En esta sección se aborda la configuración de un contenedor Ubuntu con Node.js
    npm install -g @angular/cli
     ```
 
-5. **Crear un nuevo proyecto Angular.** Navega a una carpeta donde quieres crear el proyecto y ejecuta:
+4. **Crear un nuevo proyecto Angular.** Navega a una carpeta donde quieres crear el proyecto y ejecuta:
 
     ```
    ng new mi-proyecto-angular
     ```
 
-7. **Ejecutar el proyecto Angular.** Una vez creado el proyecto, entra a la carpeta del proyecto:
+5. **Ejecutar el proyecto Angular.** Una vez creado el proyecto, entra a la carpeta del proyecto:
 
     ```
    cd mi-proyecto-angular
     ```
-
-9. **Inicia el servidor de desarrollo:** 
+    
+6. **Inicia el servidor de desarrollo:** 
 
     ```
    ng serve --host 0.0.0.0 --port 4200
